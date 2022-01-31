@@ -2,9 +2,9 @@ import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Arc} from './Arc';
 import {Atom} from './Atom';
 
-export const Logo = ({transitionStart}) => {
-	const videoConfig = useVideoConfig();
-	const frame = useCurrentFrame();
+export function ReactLogo({ transitionStart }) {
+	const videoConfig = useVideoConfig()
+	const frame = useCurrentFrame()
 
 	const development = spring({
 		config: {
@@ -13,7 +13,7 @@ export const Logo = ({transitionStart}) => {
 		},
 		fps: videoConfig.fps,
 		frame,
-	});
+	})
 
 	const rotationDevelopment = spring({
 		config: {
@@ -22,7 +22,7 @@ export const Logo = ({transitionStart}) => {
 		},
 		fps: videoConfig.fps,
 		frame,
-	});
+	})
 
 	const scaleIn = spring({
 		frame,
@@ -30,7 +30,7 @@ export const Logo = ({transitionStart}) => {
 			mass: 0.5,
 		},
 		fps: videoConfig.fps,
-	});
+	})
 
 	const translation = interpolate(
 		spring({
@@ -43,15 +43,15 @@ export const Logo = ({transitionStart}) => {
 		}),
 		[0, 1],
 		[0, -150]
-	);
+	)
 
-	const scale = frame < 50 ? scaleIn : 1;
+	const scale = frame < 50 ? scaleIn : 1
 
 	const logoRotation = interpolate(
 		frame,
 		[0, videoConfig.durationInFrames],
 		[0, 360]
-	);
+	)
 
 	return (
 		<div
@@ -65,19 +65,16 @@ export const Logo = ({transitionStart}) => {
 			<Arc
 				rotateProgress={rotationDevelopment}
 				progress={development}
-				rotation={30}
-			/>
+				rotation={30} />
 			<Arc
 				rotateProgress={rotationDevelopment}
 				rotation={90}
-				progress={development}
-			/>
+				progress={development} />
 			<Arc
 				rotateProgress={rotationDevelopment}
 				rotation={-30}
-				progress={development}
-			/>
+				progress={development} />
 			<Atom scale={rotationDevelopment} />
 		</div>
-	);
-};
+	)
+}

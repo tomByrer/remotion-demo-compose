@@ -1,15 +1,15 @@
 import {useVideoConfig} from 'remotion';
-import {COLOR_1, COLOR_2} from './config';
+import {COLOR_1, COLOR_2} from '../config';
 
-export const Arc = ({progress, rotation, rotateProgress}) => {
-	const config = useVideoConfig();
-	const cx = config.width / 2;
-	const cy = config.height / 2;
+export function Arc({ progress, rotation, rotateProgress }) {
+	const config = useVideoConfig()
+	const cx = config.width / 2
+	const cy = config.height / 2
 
-	const rx = config.height / 8;
-	const ry = rx * 2.2;
-	const arcLength = Math.PI * 2 * Math.sqrt((rx * rx + ry * ry) / 2);
-	const strokeWidth = arcLength / 60;
+	const rx = config.height / 8
+	const ry = rx * 2.2
+	const arcLength = Math.PI * 2 * Math.sqrt((rx * rx + ry * ry) / 2)
+	const strokeWidth = arcLength / 60
 
 	return (
 		<svg
@@ -35,8 +35,7 @@ export const Arc = ({progress, rotation, rotateProgress}) => {
 				strokeDasharray={arcLength}
 				strokeDashoffset={arcLength - arcLength * progress}
 				strokeLinecap="round"
-				strokeWidth={strokeWidth}
-			/>
+				strokeWidth={strokeWidth} />
 		</svg>
-	);
-};
+	)
+}

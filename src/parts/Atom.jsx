@@ -1,8 +1,8 @@
 import {useVideoConfig} from 'remotion';
-import {COLOR_1, COLOR_2} from './config';
+import {COLOR_1, COLOR_2} from '../config';
 
-export const Atom = ({scale}) => {
-	const config = useVideoConfig();
+export function Atom({ scale }) {
+	const config = useVideoConfig()
 	return (
 		<svg
 			viewBox={`0 0 ${config.width} ${config.height}`}
@@ -21,8 +21,7 @@ export const Atom = ({scale}) => {
 				r={70}
 				cx={config.width / 2}
 				cy={config.height / 2}
-				fill="url(#gradient2)"
-			/>
+				fill="url(#gradient2)" />
 		</svg>
-	);
-};
+	)
+}
