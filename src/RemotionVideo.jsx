@@ -16,8 +16,8 @@ export function RemotionVideo() {
 				defaultProps={{
 					titleText: 'Introduction',
 					frontColor: 'black',
-				}} />
-
+				}}
+			/>
 			<Composition
 				id="ReactLogo"
 				component={ReactLogo}

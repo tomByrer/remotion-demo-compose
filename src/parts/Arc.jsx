@@ -1,5 +1,5 @@
 import {useVideoConfig} from 'remotion';
-import {COLOR_1, COLOR_2} from '../config';
+import {COLOR_1, COLOR_2} from '../settings';
 
 export function Arc({ progress, rotation, rotateProgress }) {
 	const config = useVideoConfig()

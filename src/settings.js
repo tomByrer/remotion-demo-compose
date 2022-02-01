@@ -1,4 +1,4 @@
-export const CONFIG = {
+export const settings = {
 	fps: 30,
 }
 export const COLOR_1 = '#86A8E7';
