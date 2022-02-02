@@ -1,7 +1,7 @@
 import {Composition} from 'remotion';
 import {AboutRemotion} from './arrangements/AboutRemotion';
 import {ReactLogo} from './parts/ReactLogo';
-import {Subtitle} from './parts/Subtitle';
+import {Title} from './parts/Title';
 
 export function RemotionVideo() {
 	return (
@@ -28,7 +28,7 @@ export function RemotionVideo() {
 			/>
 			<Composition
 				id="Title"
-				component={Subtitle}
+				component={Title}
 				durationInFrames={100}
 				fps={30}
 				width={1920}
