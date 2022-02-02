@@ -1,4 +1,5 @@
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import * as convert from '../convert';
 
 export const Title = ({displayText, frontColor}) => {
 	const videoConfig = useVideoConfig();
@@ -28,7 +29,7 @@ export const Title = ({displayText, frontColor}) => {
 								marginRight: 10,
 								transform: `scale(${spring({
 									fps: videoConfig.fps,
-									frame: frame - i * 5,
+									frame: frame - i * convert.seconds(0.16666),
 									config: {
 										damping: 100,
 										stiffness: 200,

@@ -1,8 +1,12 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import * as convert from '../convert';
 
-export function Lift({transitionStart = 25, ...props}){
-const videoConfig = useVideoConfig();
-const frame = useCurrentFrame();
+export function Lift({
+	transitionStart=convert.seconds(0.833333),
+	...props
+}){
+	const videoConfig = useVideoConfig();
+	const frame = useCurrentFrame();
 
 	const translation = interpolate(
 		spring({
