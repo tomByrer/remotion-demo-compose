@@ -1,4 +1,6 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import * as convert from '../convert';
+
 import {Triangle} from './Triangle';
 
 const centered = {
@@ -7,13 +9,13 @@ const centered = {
 };
 
 export function RemotionLogo({
-	scaleOuter = 1.3,
+	scalePercent = 50,
 }) {
 	const frame = useCurrentFrame()
 	const videoConfig = useVideoConfig()
 	function scale(index) {
 		return spring({
-			frame: frame - index * 10,
+			frame: frame - index * convert.seconds(0.33333),
 			fps: videoConfig.fps,
 			config: {
 				mass: 2,
@@ -21,6 +23,13 @@ export function RemotionLogo({
 			},
 		})
 	}
+	const baseSize = convert.vmin(scalePercent)
+	const sizes = [
+		baseSize*1.85714,
+		baseSize*1.57142,
+		baseSize*1.28571,
+		baseSize,
+	]
 
 	return (
 		<AbsoluteFill
@@ -28,7 +37,6 @@ export function RemotionLogo({
 				...centered,
 				width: videoConfig.width,
 				height: videoConfig.height,
-				transform: `scale(${scaleOuter})`,
 			}}
 		>
 			<AbsoluteFill
@@ -37,15 +45,15 @@ export function RemotionLogo({
 					transform: `scale(${scale(0)})`,
 				}}
 			>
-				<Triangle size={245} color1='white' color2='white' />
+				<Triangle size={sizes[0]} color1='white' color2='white' />
 			</AbsoluteFill>
 			<AbsoluteFill
 				style={{
 					...centered,
-					transform: `scale(${scale(0)})`,
+					transform: `scale(${scale(0.6)})`,
 				}}
 			>
-				<Triangle size={220} opacity={0.2} />
+				<Triangle size={sizes[1]} opacity={0.2} />
 			</AbsoluteFill>
 			<AbsoluteFill
 				style={{
@@ -53,7 +61,7 @@ export function RemotionLogo({
 					transform: `scale(${scale(1)})`,
 				}}
 			>
-				<Triangle size={180} opacity={0.4} />
+				<Triangle size={sizes[2]} opacity={0.4} />
 			</AbsoluteFill>
 			<AbsoluteFill
 				style={{
@@ -61,7 +69,7 @@ export function RemotionLogo({
 					transform: `scale(${scale(2)})`,
 				}}
 			>
-				<Triangle size={140}/>
+				<Triangle size={sizes[3]}/>
 			</AbsoluteFill>
 		</AbsoluteFill>
 	)

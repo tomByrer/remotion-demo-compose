@@ -18,7 +18,7 @@ export function Lift({
 			},
 		}),
 		[0, 1],
-		[0, -150]
+		[0, convert.vh(-13.8888)]
 	);
 
 	return (

@@ -15,10 +15,10 @@ export const Title = ({
 			style={{
 				fontFamily: 'SF Pro Text, Helvetica, Arial',
 				fontWeight: 'bold',
-				fontSize: 100,
+				fontSize: convert.vw(5.0505),
 				textAlign: 'center',
 				position: 'absolute',
-				bottom: 160,
+				bottom: convert.vh(14.81481),
 				width: '100%',
 			}}
 		>
@@ -28,8 +28,8 @@ export const Title = ({
 							key={t}
 							style={{
 								color: frontColor,
-								marginLeft: 10,
-								marginRight: 10,
+								marginLeft: convert.vw(0.50505),
+								marginRight: convert.vw(0.50505),
 								transform: `scale(${spring({
 									fps: videoConfig.fps,
 									frame: frame - i * convert.seconds(0.16666),

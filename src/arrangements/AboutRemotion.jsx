@@ -37,7 +37,7 @@ export function AboutRemotion() {
 		</Series.Sequence>
 		<Series.Sequence durationInFrames={convert.seconds(4)}>
 			<LogoTwoTitle
-				logo={<Lift><RemotionLogo scaleOuter={3.3} /></Lift>}
+				logo={<Lift><RemotionLogo scalePercent={42.4}/></Lift>}
 				titleText='with Remotion'
 				subtitleText='Create videos programmatically in React!'
 				frontColor='#deefed'

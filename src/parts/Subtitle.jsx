@@ -1,4 +1,5 @@
-import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
+import * as convert from '../convert';
+
 import * as AnimateValue from '../actions/AnimateValue';
 
 export function Subtitle({ displayText, frontColor }) {
@@ -7,10 +8,10 @@ export function Subtitle({ displayText, frontColor }) {
 			style={{
 				color: frontColor,
 				fontFamily: 'Helvetica, Arial',
-				fontSize: 70,
+				fontSize: convert.vw(3.7234),
 				textAlign: 'center',
 				position: 'absolute',
-				bottom: 140,
+				bottom: convert.vh(12.9629),
 				width: '100%',
 				opacity: AnimateValue.FadeIn(),
 			}}
