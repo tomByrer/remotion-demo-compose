@@ -9,4 +9,6 @@ export const resChart = {
 	//  soical media
 	'square': {w:1080, h:1080},
 	'story': {w:1080, h:1920},
+	// special screens
+	'ultrawide': {w:3440, h:1440} // aspect ratio: 2.39:1 (2.38888...)
 }

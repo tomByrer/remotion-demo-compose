@@ -110,6 +110,21 @@ height={resChart['uxga'].h}
 // everything else is calculated`,
 			}}
 		/>
+		<Helper.AdvancedComposition
+			component={AboutRemotion}
+			durationInSeconds={14}
+			resolution='ultrawide'
+			defaultProps={{
+				introText: `
+<Helper.AdvancedComposition
+  component={AboutRemotion}
+  durationInSeconds={14}
+  resolution='ultrawide'
+/>
+// default 30fps,
+// everything else is calculated`,
+			}}
+		/>
 
 {/* /parts */}
 		<Composition
