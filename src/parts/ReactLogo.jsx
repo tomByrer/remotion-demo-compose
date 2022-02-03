@@ -1,5 +1,5 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import * as convert from '../helpers/convert';
+import * as useConvert from '../helpers/useConvert';
 
 import {Arc} from './Arc';
 import {Atom} from './Atom';
@@ -44,10 +44,10 @@ export function ReactLogo({ transitionStart }) {
 			},
 		}),
 		[0, 1],
-		[0, convert.vh(-13.8888)]
+		[0, useConvert.vh(-13.8888)]
 	)
 
-	const near2seconds = convert.seconds(1.66666)
+	const near2seconds = useConvert.seconds(1.66666)
 	const scale = frame < near2seconds ? scaleIn : 1
 
 	const logoRotation = interpolate(

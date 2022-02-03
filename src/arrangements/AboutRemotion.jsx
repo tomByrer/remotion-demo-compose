@@ -1,5 +1,5 @@
 import {Series} from "remotion"
-import * as convert from '../helpers/convert'
+import * as useConvert from '../helpers/useConvert'
 
 import {Lift} from '../actions/Lift';
 import {MovieCameraIcon} from '../parts/MovieCameraIcon';
@@ -12,7 +12,7 @@ export function AboutRemotion({
 	introText='Intro Text'
 }) {
 	return (<Series>
-		<Series.Sequence durationInFrames={convert.seconds(2)}>
+		<Series.Sequence durationInFrames={useConvert.seconds(2)}>
 			<IntroCode
 				// titleText='What would you build if you could...'
 				titleText={introText}
@@ -20,7 +20,7 @@ export function AboutRemotion({
 				backColor='#10131f'
 			/>
 		</Series.Sequence>
-		<Series.Sequence durationInFrames={convert.seconds(4)}>
+		<Series.Sequence durationInFrames={useConvert.seconds(4)}>
 			<LogoTwoTitle
 				logo={<Lift><ReactLogo /></Lift>}
 				titleText='use ReactJS to build animations...'
@@ -29,7 +29,7 @@ export function AboutRemotion({
 				backColor='#161b28'
 			/>
 		</Series.Sequence>
-		<Series.Sequence durationInFrames={convert.seconds(4)}>
+		<Series.Sequence durationInFrames={useConvert.seconds(4)}>
 			<LogoTwoTitle
 				logo={<Lift><MovieCameraIcon color='#acb0bd'/></Lift>}
 				titleText='then capture them as a movie... '
@@ -38,7 +38,7 @@ export function AboutRemotion({
 				backColor='#21304c'
 			/>
 		</Series.Sequence>
-		<Series.Sequence durationInFrames={convert.seconds(4)}>
+		<Series.Sequence durationInFrames={useConvert.seconds(4)}>
 			<LogoTwoTitle
 				logo={<Lift><RemotionLogo scalePercent={42.4}/></Lift>}
 				titleText='with Remotion'

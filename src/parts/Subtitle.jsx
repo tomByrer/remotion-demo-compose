@@ -1,4 +1,4 @@
-import * as convert from '../helpers/convert';
+import * as useConvert from '../helpers/useConvert';
 
 import * as AnimateValue from '../actions/AnimateValue';
 
@@ -8,10 +8,10 @@ export function Subtitle({ displayText, frontColor }) {
 			style={{
 				color: frontColor,
 				fontFamily: 'Helvetica, Arial',
-				fontSize: convert.vw(3.7234),
+				fontSize: useConvert.vw(3.7234),
 				textAlign: 'center',
 				position: 'absolute',
-				bottom: convert.vh(12.9629),
+				bottom: useConvert.vh(12.9629),
 				width: '100%',
 				opacity: AnimateValue.useFadeIn(),
 			}}

@@ -1,8 +1,8 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import * as convert from '../helpers/convert';
+import * as useConvert from '../helpers/useConvert';
 
 export function Lift({
-	transitionStart=convert.seconds(0.833333),
+	transitionStart=useConvert.seconds(0.833333),
 	...props
 }){
 	const videoConfig = useVideoConfig();
@@ -18,7 +18,7 @@ export function Lift({
 			},
 		}),
 		[0, 1],
-		[0, convert.vh(-13.8888)]
+		[0, useConvert.vh(-13.8888)]
 	);
 
 	return (

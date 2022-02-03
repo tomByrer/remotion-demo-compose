@@ -1,4 +1,4 @@
-import * as convert from '../helpers/convert';
+import * as useConvert from '../helpers/useConvert';
 
 import * as AnimateValue from '../actions/AnimateValue';
 
@@ -13,10 +13,10 @@ export function IntroCode({
 				style={{
 					position: 'absolute',
 					margin: '0 6.18%',
-					bottom: convert.vh(12.9629),
+					bottom: useConvert.vh(12.9629),
 					color: frontColor,
 					fontFamily: 'monospace',
-					fontSize: convert.vw(3.7234),
+					fontSize: useConvert.vw(3.7234),
 					textAlign: 'left',
 					opacity: AnimateValue.useFadeInOutTapered(2, 0.1618),
 				}}

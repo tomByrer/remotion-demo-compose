@@ -1,5 +1,5 @@
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import * as convert from '../helpers/convert';
+import * as useConvert from '../helpers/useConvert';
 
 export const Title = ({
 	displayText='Default title text',
@@ -15,10 +15,10 @@ export const Title = ({
 			style={{
 				fontFamily: 'SF Pro Text, Helvetica, Arial',
 				fontWeight: 'bold',
-				fontSize: convert.vw(5.0505),
+				fontSize: useConvert.vw(5.0505),
 				textAlign: 'center',
 				position: 'absolute',
-				bottom: convert.vh(14.81481),
+				bottom: useConvert.vh(14.81481),
 				width: '100%',
 			}}
 		>
@@ -28,11 +28,11 @@ export const Title = ({
 							key={t}
 							style={{
 								color: frontColor,
-								marginLeft: convert.vw(0.50505),
-								marginRight: convert.vw(0.50505),
+								marginLeft: useConvert.vw(0.50505),
+								marginRight: useConvert.vw(0.50505),
 								transform: `scale(${spring({
 									fps: videoConfig.fps,
-									frame: frame - i * convert.seconds(0.16666),
+									frame: frame - i * useConvert.seconds(0.16666),
 									config: {
 										damping: 100,
 										stiffness: 200,

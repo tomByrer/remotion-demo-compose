@@ -1,5 +1,5 @@
 import {useVideoConfig} from 'remotion';
-import * as convert from '../helpers/convert';
+import * as useConvert from '../helpers/useConvert';
 
 import {COLOR_1, COLOR_2} from '../helpers/settings';
 
@@ -20,7 +20,7 @@ export function Atom({ scale }) {
 				</linearGradient>
 			</defs>
 			<circle
-				r={convert.vh(7.20255)}
+				r={useConvert.vh(7.20255)}
 				cx={config.width / 2}
 				cy={config.height / 2}
 				fill="url(#gradient2)" />

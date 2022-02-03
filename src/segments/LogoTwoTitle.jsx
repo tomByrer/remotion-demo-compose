@@ -1,12 +1,12 @@
 import {interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
-import * as convert from '../helpers/convert';
+import * as useConvert from '../helpers/useConvert';
 
 import {Subtitle} from '../parts/Subtitle';
 import {Title} from '../parts/Title';
 
 export function LogoTwoTitle({
 		from=0,
-		duration=convert.seconds(4),
+		duration=useConvert.seconds(4),
 		logo,
 		titleText='title text',
 		subtitleText='subtitle text',

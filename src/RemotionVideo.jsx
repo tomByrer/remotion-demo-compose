@@ -1,6 +1,6 @@
 import {Composition} from 'remotion';
 import {resChart} from './helpers/vidsize'
-import * as Helper from './helpers/helper'
+import * as Helper from './helpers/Helper'
 
 import {AboutRemotion} from './arrangements/AboutRemotion';
 import {ReactLogo} from './parts/ReactLogo';

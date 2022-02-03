@@ -1,5 +1,5 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import * as convert from '../helpers/convert';
+import * as useConvert from '../helpers/useConvert';
 
 import {Triangle} from './Triangle';
 
@@ -15,7 +15,7 @@ export function RemotionLogo({
 	const videoConfig = useVideoConfig()
 	function scale(index) {
 		return spring({
-			frame: frame - index * convert.seconds(0.33333),
+			frame: frame - index * useConvert.seconds(0.33333),
 			fps: videoConfig.fps,
 			config: {
 				mass: 2,
@@ -23,7 +23,7 @@ export function RemotionLogo({
 			},
 		})
 	}
-	const baseSize = convert.vmin(scalePercent)
+	const baseSize = useConvert.vmin(scalePercent)
 	const sizes = [
 		baseSize*1.85714,
 		baseSize*1.57142,
