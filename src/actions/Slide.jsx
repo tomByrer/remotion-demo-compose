@@ -29,3 +29,35 @@ export function Lift({
 		</div>
 	)
 }
+
+
+export function Right({
+	transitionStart=0,
+	vhAdjust=-13.8888,
+	pcLeftStart=-100,
+	...props
+}){
+	const videoConfig = useVideoConfig();
+	const frame = useCurrentFrame();
+
+	const translation = interpolate(
+		spring({
+			frame: frame - transitionStart,
+			fps: videoConfig.fps,
+			config: {
+				damping: 61,
+				mass: 8.09,
+			},
+		}),
+		[0, 1],
+		[pcLeftStart, 0]
+	);
+
+	return (
+		<div style={{
+			transform: `translate(${translation}%, ${useConvert.vh(vhAdjust)}px)`,
+		}}>
+			{props.children}
+		</div>
+	)
+}
