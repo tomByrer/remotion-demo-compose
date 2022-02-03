@@ -22,7 +22,11 @@ export function AboutRemotion({
 		</Series.Sequence>
 		<Series.Sequence durationInFrames={useConvert.seconds(4)}>
 			<LogoTwoTitle
-				logo={<Slide.Lift><ReactLogo /></Slide.Lift>}
+				logo={
+					<Slide.Lift>
+						<ReactLogo />
+					</Slide.Lift>
+				}
 				titleText='use ReactJS to build animations...'
 				subtitleText='Animate with web technologies you know & love.'
 				frontColor='#e9e4d7'
@@ -31,7 +35,11 @@ export function AboutRemotion({
 		</Series.Sequence>
 		<Series.Sequence durationInFrames={useConvert.seconds(4)}>
 			<LogoTwoTitle
-				logo={<Slide.Right pcLeftStart={-83.81}><MovieCameraIcon color='#acb0bd'/></Slide.Right>}
+				logo={
+					<Slide.Right pcLeftStart={-83.81}>
+						<MovieCameraIcon color='#acb0bd'/>
+					</Slide.Right>
+				}
 				titleText='then capture them as a movie... '
 				subtitleText='Export a MP4 file or use the &lt;Player&gt;.'
 				frontColor='#d7d9df'
@@ -40,11 +48,16 @@ export function AboutRemotion({
 		</Series.Sequence>
 		<Series.Sequence durationInFrames={useConvert.seconds(4)}>
 			<LogoTwoTitle
-				logo={<Slide.Lift><RemotionLogo scalePercent={42.4}/></Slide.Lift>}
+				logo={<>
+					<RemotionLogo scalePercent={261.8}/>
+					<Slide.Lift>
+						<RemotionLogo scalePercent={42.4}/>
+					</Slide.Lift>
+				</>}
 				titleText='with Remotion'
 				subtitleText='Create videos programmatically in React!'
-				frontColor='#deefed'
-				backColor='#2b4673'
+				frontColor='white'
+				backColor='#21304c'
 			/>
 		</Series.Sequence>
 	</Series>)
