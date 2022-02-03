@@ -1,5 +1,5 @@
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import * as convert from '../convert';
+import * as convert from '../helpers/convert';
 
 export const Title = ({
 	displayText='Default title text',

@@ -1,4 +1,4 @@
-import * as convert from '../convert';
+import * as convert from '../helpers/convert';
 
 import * as AnimateValue from '../actions/AnimateValue';
 

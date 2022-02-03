@@ -1,5 +1,5 @@
 import {interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
-import * as convert from '../convert';
+import * as convert from '../helpers/convert';
 
 import {Subtitle} from '../parts/Subtitle';
 import {Title} from '../parts/Title';

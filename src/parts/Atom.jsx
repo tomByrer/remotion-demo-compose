@@ -1,7 +1,7 @@
 import {useVideoConfig} from 'remotion';
-import * as convert from '../convert';
+import * as convert from '../helpers/convert';
 
-import {COLOR_1, COLOR_2} from '../settings';
+import {COLOR_1, COLOR_2} from '../helpers/settings';
 
 export function Atom({ scale }) {
 	const config = useVideoConfig()

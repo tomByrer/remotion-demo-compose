@@ -1,5 +1,5 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import * as convert from '../convert';
+import * as convert from '../helpers/convert';
 
 export function Lift({
 	transitionStart=convert.seconds(0.833333),

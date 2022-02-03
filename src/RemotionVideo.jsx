@@ -1,5 +1,6 @@
 import {Composition} from 'remotion';
-import {res} from './vidsize'
+import {resChart} from './helpers/vidsize'
+import * as Helper from './helpers/helper'
 
 import {AboutRemotion} from './arrangements/AboutRemotion';
 import {ReactLogo} from './parts/ReactLogo';
@@ -25,32 +26,63 @@ export function RemotionVideo() {
 				component={AboutRemotion}
 				fps={30}
 				durationInFrames={420}
-				width={res.p720.w}
-				height={res.p720.h}
+				width={resChart['720p'].w}
+				height={resChart['720p'].h}
 				defaultProps={{
 					titleText: 'Introduction',
 					frontColor: 'black',
 				}}
 			/>
 			<Composition
-				id="AboutRemotion-XGA"
+				id="AboutRemotion-720p60fps"
 				component={AboutRemotion}
-				fps={30}
-				durationInFrames={420}
-				width={res.xga.w}
-				height={res.xga.h}
+				fps={60}
+				durationInFrames={840}
+				width={resChart['720p'].w}
+				height={resChart['720p'].h}
 				defaultProps={{
 					titleText: 'Introduction',
 					frontColor: 'black',
 				}}
 			/>
 			<Composition
-				id="AboutRemotion-UXGA"
+				id="AboutRemotion-xga"
 				component={AboutRemotion}
 				fps={30}
 				durationInFrames={420}
-				width={res.uxga.w}
-				height={res.uxga.h}
+				width={resChart['xga'].w}
+				height={resChart['xga'].h}
+				defaultProps={{
+					titleText: 'Introduction',
+					frontColor: 'black',
+				}}
+			/>
+			<Composition
+				id="AboutRemotion-uxga"
+				component={AboutRemotion}
+				fps={30}
+				durationInFrames={420}
+				width={resChart['uxga'].w}
+				height={resChart['uxga'].h}
+				defaultProps={{
+					titleText: 'Introduction',
+					frontColor: 'black',
+				}}
+			/>
+
+			<Helper.AdvancedComposition
+				component={AboutRemotion}
+				durationInSeconds={14}
+				resolution='square'
+				defaultProps={{
+					titleText: 'Introduction',
+					frontColor: 'black',
+				}}
+			/>
+			<Helper.AdvancedComposition
+				component={AboutRemotion}
+				durationInSeconds={14}
+				resolution='story'
 				defaultProps={{
 					titleText: 'Introduction',
 					frontColor: 'black',
@@ -71,32 +103,32 @@ export function RemotionVideo() {
 				component={Title}
 				fps={30}
 				durationInFrames={100}
-				width={res.p1080.w}
-				height={res.p1080.h}
+				width={resChart['1080p'].w}
+				height={resChart['1080p'].h}
 			/>
 			<Composition
 				id="Title-720p"
 				component={Title}
 				fps={30}
 				durationInFrames={100}
-				width={res.p720.w}
-				height={res.p720.h}
+				width={resChart['720p'].w}
+				height={resChart['720p'].h}
 			/>
 			<Composition
-				id="Title-XGA"
+				id="Title-xga"
 				component={Title}
-				width={res.xga.w}
-				height={res.xga.h}
+				width={resChart['xga'].w}
+				height={resChart['xga'].h}
 				fps={30}
 				durationInFrames={100}
 			/>
 			<Composition
-				id="Title-UXGA"
+				id="Title-uxga"
 				component={Title}
 				fps={30}
 				durationInFrames={100}
-				width={res.uxga.w}
-				height={res.uxga.h}
+				width={resChart['uxga'].w}
+				height={resChart['uxga'].h}
 			/>
 		</>
 	)

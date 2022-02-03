@@ -1,5 +1,5 @@
 import {Series} from "remotion"
-import * as convert from '../convert'
+import * as convert from '../helpers/convert'
 
 import {Lift} from '../actions/Lift';
 import {MovieCameraIcon} from '../parts/MovieCameraIcon';
