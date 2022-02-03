@@ -17,8 +17,7 @@ export function RemotionVideo() {
 				width={1920}
 				height={1080}
 				defaultProps={{
-					titleText: 'Introduction',
-					frontColor: 'black',
+					introText: `Remotion config: 1080p 30fps`,
 				}}
 			/>
 			<Composition
@@ -29,8 +28,10 @@ export function RemotionVideo() {
 				width={resChart['720p'].w}
 				height={resChart['720p'].h}
 				defaultProps={{
-					titleText: 'Introduction',
-					frontColor: 'black',
+					introText: `
+width={resChart['720p'].w}
+height={resChart['720p'].h}
+30fps`,
 				}}
 			/>
 			<Composition
@@ -41,8 +42,10 @@ export function RemotionVideo() {
 				width={resChart['720p'].w}
 				height={resChart['720p'].h}
 				defaultProps={{
-					titleText: 'Introduction',
-					frontColor: 'black',
+					introText: `
+width={resChart['720p'].w}
+height={resChart['720p'].h}
+60fps`,
 				}}
 			/>
 			<Composition
@@ -53,8 +56,10 @@ export function RemotionVideo() {
 				width={resChart['xga'].w}
 				height={resChart['xga'].h}
 				defaultProps={{
-					titleText: 'Introduction',
-					frontColor: 'black',
+					introText: `
+width={resChart['xga'].w}
+height={resChart['xga'].h}
+30fps`,
 				}}
 			/>
 			<Composition
@@ -65,8 +70,10 @@ export function RemotionVideo() {
 				width={resChart['uxga'].w}
 				height={resChart['uxga'].h}
 				defaultProps={{
-					titleText: 'Introduction',
-					frontColor: 'black',
+					introText: `
+width={resChart['uxga'].w}
+height={resChart['uxga'].h}
+30fps`,
 				}}
 			/>
 
@@ -75,8 +82,14 @@ export function RemotionVideo() {
 				durationInSeconds={14}
 				resolution='square'
 				defaultProps={{
-					titleText: 'Introduction',
-					frontColor: 'black',
+					introText: `
+<Helper.AdvancedComposition
+  component={AboutRemotion}
+  durationInSeconds={14}
+  resolution='square'
+/>
+// default 30fps,
+// everything else is calculated`,
 				}}
 			/>
 			<Helper.AdvancedComposition
@@ -84,8 +97,14 @@ export function RemotionVideo() {
 				durationInSeconds={14}
 				resolution='story'
 				defaultProps={{
-					titleText: 'Introduction',
-					frontColor: 'black',
+					introText: `
+<Helper.AdvancedComposition
+  component={AboutRemotion}
+  durationInSeconds={14}
+  resolution='story'
+/>
+// default 30fps,
+// everything else is calculated`,
 				}}
 			/>
 

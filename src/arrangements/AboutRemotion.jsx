@@ -8,11 +8,14 @@ import {RemotionLogo} from '../parts/RemotionLogo';
 import {IntroCode} from '../parts/IntroCode';
 import {LogoTwoTitle} from '../segments/LogoTwoTitle';
 
-export function AboutRemotion() {
+export function AboutRemotion({
+	introText='Intro Text'
+}) {
 	return (<Series>
 		<Series.Sequence durationInFrames={convert.seconds(2)}>
 			<IntroCode
-				titleText='What would you build if you could...'
+				// titleText='What would you build if you could...'
+				titleText={introText}
 				frontColor='#d9d0c6'
 				backColor='#10131f'
 			/>
