@@ -1,40 +1,41 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion'
 import * as convert from '../helpers/convert';
 
-export function FadeIn() {
+export function useFadeIn(seconds=0.5){
 	const frame = useCurrentFrame()
 	return interpolate(
 		frame,
-		[0, convert.seconds(0.5)],
+		[0, convert.seconds(seconds)],
 		[0, 1]
 	)
 }
 
-export function FadeOut() {
+export function useFadeOut(seconds=0.5) {
 	const frame = useCurrentFrame()
-	const videoConfig = useVideoConfig()
 	return interpolate(
 		frame,
-		// [0, videoConfig.fps * 0.5],
-		[0, convert.seconds(0.5)],
+		[0, convert.seconds(seconds)],
 		[1, 0]
 	)
 }
 
-// export function FadeOutTapered(duration, step) {
-// 	const frame = useCurrentFrame()
-// 	const videoConfig = useVideoConfig()
-// 	duration = (typeof duration !== 'undefined')
-// 							? duration
-// 							: videoConfig.fps
-// 	return interpolate(
-// 		frame,
-// 		[0, step*0.5, step-1, duration],
-// 		[1, 0.9, 0.6, 0]
-// 	)
-// }
+export function useFadeInOutTapered(seconds, widen) {
+	const frame = useCurrentFrame()
+	const videoConfig = useVideoConfig()
+	const frameLen = (typeof seconds !== 'undefined')
+							? convert.seconds(seconds)
+							: videoConfig.fps * 2
+	const step = (typeof widen !== 'undefined')
+							? frameLen * widen
+							: frameLen * 0.25
+	return interpolate(
+		frame,
+		[0, step, frameLen - step, frameLen],
+		[0, 1, 0.8382, 0]
+	)
+}
 
-// export function FadeOutTaperedSeconds(startSecs, durationSecs) {
+// export function useFadeOutTaperedSeconds(startSecs, durationSecs) {
 // 	const frame = useCurrentFrame()
 // 	const videoConfig = useVideoConfig()
 // 	const startFrames = startSecs * videoConfig.fps

@@ -5,13 +5,13 @@ import {Lift} from '../actions/Lift';
 import {MovieCameraIcon} from '../parts/MovieCameraIcon';
 import {ReactLogo} from '../parts/ReactLogo';
 import {RemotionLogo} from '../parts/RemotionLogo';
-import {SmallTitle} from '../parts/SmallTitle';
+import {IntroCode} from '../parts/IntroCode';
 import {LogoTwoTitle} from '../segments/LogoTwoTitle';
 
 export function AboutRemotion() {
 	return (<Series>
 		<Series.Sequence durationInFrames={convert.seconds(2)}>
-			<SmallTitle
+			<IntroCode
 				titleText='What would you build if you could...'
 				frontColor='#d9d0c6'
 				backColor='#10131f'

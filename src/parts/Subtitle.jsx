@@ -13,7 +13,7 @@ export function Subtitle({ displayText, frontColor }) {
 				position: 'absolute',
 				bottom: convert.vh(12.9629),
 				width: '100%',
-				opacity: AnimateValue.FadeIn(),
+				opacity: AnimateValue.useFadeIn(),
 			}}
 		>
 			{displayText}
