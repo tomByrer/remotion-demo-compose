@@ -1,7 +1,7 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion'
 import * as useConvert from '../helpers/useConvert';
 
-export function useFadeIn(seconds=0.5){
+export function fadeIn(seconds=0.5){
 	const frame = useCurrentFrame()
 	return interpolate(
 		frame,
@@ -10,7 +10,7 @@ export function useFadeIn(seconds=0.5){
 	)
 }
 
-export function useFadeOut(seconds=0.5) {
+export function fadeOut(seconds=0.5) {
 	const frame = useCurrentFrame()
 	return interpolate(
 		frame,
@@ -19,7 +19,7 @@ export function useFadeOut(seconds=0.5) {
 	)
 }
 
-export function useFadeInOutTapered(seconds, widen) {
+export function fadeInOutTapered(seconds, widen) {
 	const frame = useCurrentFrame()
 	const videoConfig = useVideoConfig()
 	const frameLen = (typeof seconds !== 'undefined')

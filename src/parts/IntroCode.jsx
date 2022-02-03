@@ -1,6 +1,5 @@
 import * as useConvert from '../helpers/useConvert';
-
-import * as AnimateValue from '../actions/AnimateValue';
+import * as useAnimation from '../actions/useAnimation';
 
 export function IntroCode({
 	titleText='title text',
@@ -18,7 +17,7 @@ export function IntroCode({
 					fontFamily: 'monospace',
 					fontSize: useConvert.vw(3.7234),
 					textAlign: 'left',
-					opacity: AnimateValue.useFadeInOutTapered(2, 0.1618),
+					opacity: useAnimation.fadeInOutTapered(2, 0.1618),
 				}}
 			>
 				{titleText}

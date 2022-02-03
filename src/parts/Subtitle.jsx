@@ -1,6 +1,5 @@
 import * as useConvert from '../helpers/useConvert';
-
-import * as AnimateValue from '../actions/AnimateValue';
+import * as useAnimation from '../actions/useAnimation';
 
 export function Subtitle({ displayText, frontColor }) {
 	return (
@@ -13,7 +12,7 @@ export function Subtitle({ displayText, frontColor }) {
 				position: 'absolute',
 				bottom: useConvert.vh(12.9629),
 				width: '100%',
-				opacity: AnimateValue.useFadeIn(),
+				opacity: useAnimation.fadeIn(),
 			}}
 		>
 			{displayText}

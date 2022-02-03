@@ -87,9 +87,9 @@ height={resChart['uxga'].h}
 			defaultProps={{
 				introText: `
 <Helper.AdvancedComposition
-component={AboutRemotion}
-durationInSeconds={14}
-resolution='square'
+  component={AboutRemotion}
+  durationInSeconds={14}
+  resolution='square'
 />
 // default 30fps,
 // everything else is calculated`,
@@ -102,9 +102,9 @@ resolution='square'
 			defaultProps={{
 				introText: `
 <Helper.AdvancedComposition
-component={AboutRemotion}
-durationInSeconds={14}
-resolution='story'
+  component={AboutRemotion}
+  durationInSeconds={14}
+  resolution='story'
 />
 // default 30fps,
 // everything else is calculated`,
